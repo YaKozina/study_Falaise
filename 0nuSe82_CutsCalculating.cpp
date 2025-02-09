@@ -1,11 +1,11 @@
 //calculating cuts for 0nuSe82
-#include "/pbs/home/y/ykozina/tutorial/MiModule/include/MiEvent.h"
+#include "./include/MiEvent.h"
 #include <iostream>
-R__LOAD_LIBRARY(/pbs/home/y/ykozina/tutorial/MiModule/lib/libMiModule.so);
+R__LOAD_LIBRARY(./lib/libMiModule.so);
 
 void Example_ROOT()
 {
-    TFile* f = new TFile("Default.root");  
+    TFile* f = new TFile("./testing_products/Default.root");  
     TTree* s = (TTree*) f->Get("Event");  // Отримуємо дерево з іменем "Event"
 //  s->Print(); //get list of branches in Event
 
