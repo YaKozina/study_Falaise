@@ -1,4 +1,4 @@
-//calculating cuts for 0nuSe82
+//calculating cuts for 0nuSe82//modified Example_ROOT.cpp script
 #include "./include/MiEvent.h"
 #include <iostream>
 R__LOAD_LIBRARY(./lib/libMiModule.so);
