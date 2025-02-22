@@ -3,7 +3,7 @@
 #include <iostream>
 R__LOAD_LIBRARY(./libMiModule.so);
 
-void Example_ROOT()
+void MiModule_DataCutCalc()
 {
     TFile* f = new TFile("Default.root");  
     TTree* s = (TTree*) f->Get("Event");  // get tree with name "Event"
