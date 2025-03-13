@@ -13,6 +13,6 @@
 # #SBATCH --output=/pbs/home/y/ykozina/tutorial/0nu/$A_$a_out.log 
 # #SBATCH --error=/pbs/home/y/ykozina/tutorial/0nu/$A_$a_err.log
 
-/pbs/home/y/ykozina/tutorial/0nu/ flsimulate -c Simu_0nu_Se82.conf -o Simu_0nu_Se82.brio
-/pbs/home/y/ykozina/tutorial/0nu/ flreconstruct -p p_MiModule_v00.conf -i Simu_0nu_Se82.brio -o Reco_0nu_Se82.brio
+/sps/nemo/sw/redhat-9-x86_64/snsw/opt/falaise-5.1.2/bin/flsimulate -c Simu_0nu_Se82.conf -o Simu_0nu_Se82.brio
+#/sps/nemo/sw/redhat-9-x86_64/snsw/opt/falaise-5.1.2/bin/flreconstruct -p p_MiModule_v00.conf -i Simu_0nu_Se82.brio -o Reco_0nu_Se82.brio
 
