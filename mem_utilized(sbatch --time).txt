@@ -1,0 +1,361 @@
+0nu Se_82 100 events, flsimulate only
+
+
+for some  nubers of seconds of SBATCH --time - Memory Utilized has stange values, these data not corelate with the previous ones (e.g. row 33 vs row  245, there is a great mismatch for the rows marked with '?????' with the rows containing data about memory depending on the same SBATCH --time value)
+
+
+cca016:/sps/nemo/scratch/ykozina/Falaise/tutorial/0nu(0)>sbatch send_0nu.sh
+sbatch: INFO: Account: nemo
+sbatch: INFO: Licences: sps_default
+sbatch: INFO: Submission node: cca016
+sbatch: INFO: Partition set to: htc
+sbatch: INFO: Partition limited to one node per job.
+sbatch: INFO: Time limit set to: 0-00:11.0 (11.0 minutes) <---------------
+Submitted batch job 49782292
+cca016:/sps/nemo/scratch/ykozina/Falaise/tutorial/0nu(0)>seff 49782292
+Job ID: 49782292
+Cluster: ccslurmlocal
+User/Group: ykozina/nemo
+State: COMPLETED (exit code 0)
+Cores: 1
+CPU Utilized: 00:00:04
+CPU Efficiency: 40.00% of 00:00:10 core-walltime
+Job Wall-clock time: 00:00:10
+Memory Utilized: 434.75 MB <---------------
+Memory Efficiency: 8.49% of 5.00 GB (5.00 GB/node)
+
+***********************************************************************************************************
+cca016:/sps/nemo/scratch/ykozina/Falaise/tutorial/0nu(0)>sbatch send_0nu.sh
+sbatch: INFO: Account: nemo
+sbatch: INFO: Licences: sps_default
+sbatch: INFO: Submission node: cca016
+sbatch: INFO: Partition set to: htc
+sbatch: INFO: Partition limited to one node per job.
+sbatch: INFO: Time limit set to: 0-00:05.0 (5.0 minutes) <---------------???????????????
+Submitted batch job 49782831
+cca016:/sps/nemo/scratch/ykozina/Falaise/tutorial/0nu(0)>seff 49782292
+Job ID: 49782292
+Cluster: ccslurmlocal
+User/Group: ykozina/nemo
+State: COMPLETED (exit code 0)
+Cores: 1
+CPU Utilized: 00:00:04
+CPU Efficiency: 40.00% of 00:00:10 core-walltime
+Job Wall-clock time: 00:00:10
+Memory Utilized: 434.75 MB <---------------????????????????????
+Memory Efficiency: 8.49% of 5.00 GB (5.00 GB/node)
+
+*****************************************************************************************************************************
+cca016:/sps/nemo/scratch/ykozina/Falaise/tutorial/0nu(0)>sbatch send_0nu.sh
+sbatch: INFO: Account: nemo
+sbatch: INFO: Licences: sps_default
+sbatch: INFO: Submission node: cca016
+sbatch: INFO: Partition set to: htc
+sbatch: INFO: Partition limited to one node per job.
+sbatch: INFO: Time limit set to: 0-00:04.0 (4.0 minutes) <---------------??????????????
+Submitted batch job 49782862
+cca016:/sps/nemo/scratch/ykozina/Falaise/tutorial/0nu(0)>seff 49782862
+Job ID: 49782862
+Cluster: ccslurmlocal
+User/Group: ykozina/nemo
+State: COMPLETED (exit code 0)
+Cores: 1
+CPU Utilized: 00:00:03
+CPU Efficiency: 25.00% of 00:00:12 core-walltime
+Job Wall-clock time: 00:00:12
+Memory Utilized: 431.00 MB <---------------????????????????
+Memory Efficiency: 8.42% of 5.00 GB (5.00 GB/node)
+
+***********************************************************************************************************
+cca016:/sps/nemo/scratch/ykozina/Falaise/tutorial/0nu(0)>sbatch send_0nu.sh
+sbatch: INFO: Account: nemo
+sbatch: INFO: Licences: sps_default
+sbatch: INFO: Submission node: cca016
+sbatch: INFO: Partition set to: htc
+sbatch: INFO: Partition limited to one node per job.
+sbatch: INFO: Time limit set to: 0-00:03.0 (3.0 minutes) <---------------????????????????????
+Submitted batch job 49782926
+cca016:/sps/nemo/scratch/ykozina/Falaise/tutorial/0nu(0)>seff 49782926
+Job ID: 49782926
+Cluster: ccslurmlocal
+User/Group: ykozina/nemo
+State: COMPLETED (exit code 0)
+Cores: 1
+CPU Utilized: 00:00:04
+CPU Efficiency: 28.57% of 00:00:14 core-walltime
+Job Wall-clock time: 00:00:14
+Memory Utilized: 436.24 MB <---------------??????????????????????????????????
+Memory Efficiency: 8.52% of 5.00 GB (5.00 GB/node)
+
+***********************************************************************************************
+cca016:/sps/nemo/scratch/ykozina/Falaise/tutorial/0nu(0)>sbatch send_0nu.sh
+sbatch: INFO: Account: nemo
+sbatch: INFO: Licences: sps_default
+sbatch: INFO: Submission node: cca016
+sbatch: INFO: Partition set to: htc
+sbatch: INFO: Partition limited to one node per job.
+sbatch: INFO: Time limit set to: 0-00:03.0 (3.0 minutes) <---------------????????????????????
+Submitted batch job 49783025
+cca016:/sps/nemo/scratch/ykozina/Falaise/tutorial/0nu(0)>seff 49783025
+Job ID: 49783025
+Cluster: ccslurmlocal
+User/Group: ykozina/nemo
+State: COMPLETED (exit code 0)
+Cores: 1
+CPU Utilized: 00:00:04
+CPU Efficiency: 57.14% of 00:00:07 core-walltime
+Job Wall-clock time: 00:00:07
+Memory Utilized: 125.35 MB <---------------????????????????????????????
+Memory Efficiency: 2.45% of 5.00 GB (5.00 GB/node)
+
+*********************************************************************************************************
+cca016:/sps/nemo/scratch/ykozina/Falaise/tutorial/0nu(0)>sbatch send_0nu.sh
+sbatch: INFO: Account: nemo
+sbatch: INFO: Licences: sps_default
+sbatch: INFO: Submission node: cca016
+sbatch: INFO: Partition set to: htc
+sbatch: INFO: Partition limited to one node per job.
+sbatch: INFO: Time limit set to: 0-00:04.0 (4.0 minutes) <---------------?????????????????
+Submitted batch job 49783071
+cca016:/sps/nemo/scratch/ykozina/Falaise/tutorial/0nu(0)>seff 49783071
+Job ID: 49783071
+Cluster: ccslurmlocal
+User/Group: ykozina/nemo
+State: COMPLETED (exit code 0)
+Cores: 1
+CPU Utilized: 00:00:04
+CPU Efficiency: 57.14% of 00:00:07 core-walltime
+Job Wall-clock time: 00:00:07
+Memory Utilized: 124.91 MB <--------------- ??????????????
+Memory Efficiency: 2.44% of 5.00 GB (5.00 GB/node)
+
+***************************************************************************************************************
+cca016:/sps/nemo/scratch/ykozina/Falaise/tutorial/0nu(0)>sbatch send_0nu.sh
+sbatch: INFO: Account: nemo
+sbatch: INFO: Licences: sps_default
+sbatch: INFO: Submission node: cca016
+sbatch: INFO: Partition set to: htc
+sbatch: INFO: Partition limited to one node per job.
+sbatch: INFO: Time limit set to: 0-00:04.0 (4.0 minutes) <---------------????????????
+Submitted batch job 49783135
+cca016:/sps/nemo/scratch/ykozina/Falaise/tutorial/0nu(0)>seff 49783135
+Job ID: 49783135
+Cluster: ccslurmlocal
+User/Group: ykozina/nemo
+State: COMPLETED (exit code 0)
+Cores: 1
+CPU Utilized: 00:00:04
+CPU Efficiency: 36.36% of 00:00:11 core-walltime
+Job Wall-clock time: 00:00:11
+Memory Utilized: 433.23 MB <--------------- ????????
+Memory Efficiency: 8.46% of 5.00 GB (5.00 GB/node)
+
+***********************************************************************************************************
+cca016:/sps/nemo/scratch/ykozina/Falaise/tutorial/0nu(0)>sbatch send_0nu.sh
+sbatch: INFO: Account: nemo
+sbatch: INFO: Licences: sps_default
+sbatch: INFO: Submission node: cca016
+sbatch: INFO: Partition set to: htc
+sbatch: INFO: Partition limited to one node per job.
+sbatch: INFO: Time limit set to: 0-00:03.0 (3.0 minutes) <---------------???????????
+Submitted batch job 49783180
+cca016:/sps/nemo/scratch/ykozina/Falaise/tutorial/0nu(0)>seff 49783180
+Job ID: 49783180
+Cluster: ccslurmlocal
+User/Group: ykozina/nemo
+State: COMPLETED (exit code 0)
+Cores: 1
+CPU Utilized: 00:00:03
+CPU Efficiency: 37.50% of 00:00:08 core-walltime
+Job Wall-clock time: 00:00:08
+Memory Utilized: 411.79 MB <--------------- ????????????
+Memory Efficiency: 8.04% of 5.00 GB (5.00 GB/node)
+
+**************************************************************************************************
+cca016:/sps/nemo/scratch/ykozina/Falaise/tutorial/0nu(0)>sbatch send_0nu.sh
+sbatch: INFO: Account: nemo
+sbatch: INFO: Licences: sps_default
+sbatch: INFO: Submission node: cca016
+sbatch: INFO: Partition set to: htc
+sbatch: INFO: Partition limited to one node per job.
+sbatch: INFO: Time limit set to: 0-00:02.0 (2.0 minutes) <---------------
+Submitted batch job 49783182
+cca016:/sps/nemo/scratch/ykozina/Falaise/tutorial/0nu(0)>seff 49783182
+Job ID: 49783182
+Cluster: ccslurmlocal
+User/Group: ykozina/nemo
+State: COMPLETED (exit code 0)
+Cores: 1
+CPU Utilized: 00:00:03
+CPU Efficiency: 60.00% of 00:00:05 core-walltime
+Job Wall-clock time: 00:00:05
+Memory Utilized: 121.14 MB <---------------
+Memory Efficiency: 2.37% of 5.00 GB (5.00 GB/node)
+
+******************************************************************************************************
+cca016:/sps/nemo/scratch/ykozina/Falaise/tutorial/0nu(0)>sbatch send_0nu.sh
+sbatch: INFO: Account: nemo
+sbatch: INFO: Licences: sps_default
+sbatch: INFO: Submission node: cca016
+sbatch: INFO: Partition set to: htc
+sbatch: INFO: Partition limited to one node per job.
+sbatch: INFO: Time limit set to: 0-00:01.0 (1.0 minutes) <---------------
+Submitted batch job 49783186
+cca016:/sps/nemo/scratch/ykozina/Falaise/tutorial/0nu(0)>seff 49783186
+Job ID: 49783186
+Cluster: ccslurmlocal
+User/Group: ykozina/nemo
+State: COMPLETED (exit code 0)
+Cores: 1
+CPU Utilized: 00:00:05
+CPU Efficiency: 38.46% of 00:00:13 core-walltime
+Job Wall-clock time: 00:00:13
+Memory Utilized: 407.99 MB <---------------
+Memory Efficiency: 7.97% of 5.00 GB (5.00 GB/node)
+
+************************************************************************************************************
+cca016:/sps/nemo/scratch/ykozina/Falaise/tutorial/0nu(0)>sbatch send_0nu.sh
+sbatch: INFO: Account: nemo
+sbatch: INFO: Licences: sps_default
+sbatch: INFO: Submission node: cca016
+sbatch: INFO: Partition set to: htc
+sbatch: INFO: Partition limited to one node per job.
+sbatch: INFO: Time limit set to: 0-00:05.0 (5.0 minutes) <---------------??????????
+Submitted batch job 49783253
+cca016:/sps/nemo/scratch/ykozina/Falaise/tutorial/0nu(0)>seff 49783253
+Job ID: 49783253
+Cluster: ccslurmlocal
+User/Group: ykozina/nemo
+State: COMPLETED (exit code 0)
+Cores: 1
+CPU Utilized: 00:00:03
+CPU Efficiency: 60.00% of 00:00:05 core-walltime
+Job Wall-clock time: 00:00:05
+Memory Utilized: 121.70 MB <---------------?????????
+Memory Efficiency: 2.38% of 5.00 GB (5.00 GB/node)
+
+**********************************************************************************************************
+cca016:/sps/nemo/scratch/ykozina/Falaise/tutorial/0nu(0)>sbatch send_0nu.sh
+sbatch: INFO: Account: nemo
+sbatch: INFO: Licences: sps_default
+sbatch: INFO: Submission node: cca016
+sbatch: INFO: Partition set to: htc
+sbatch: INFO: Partition limited to one node per job.
+sbatch: INFO: Time limit set to: 0-00:05.0 (5.0 minutes) <---------------???????????
+Submitted batch job 49783256
+cca016:/sps/nemo/scratch/ykozina/Falaise/tutorial/0nu(0)>seff 49783256
+Job ID: 49783256
+Cluster: ccslurmlocal
+User/Group: ykozina/nemo
+State: COMPLETED (exit code 0)
+Cores: 1
+CPU Utilized: 00:00:04
+CPU Efficiency: 57.14% of 00:00:07 core-walltime
+Job Wall-clock time: 00:00:07
+Memory Utilized: 126.03 MB <---------------????????
+Memory Efficiency: 2.46% of 5.00 GB (5.00 GB/node)
+*********************************************************************************************************
+cca016:/sps/nemo/scratch/ykozina/Falaise/tutorial/0nu(0)>sbatch send_0nu.sh
+sbatch: INFO: Account: nemo
+sbatch: INFO: Licences: sps_default
+sbatch: INFO: Submission node: cca016
+sbatch: INFO: Partition set to: htc
+sbatch: INFO: Partition limited to one node per job.
+sbatch: INFO: Time limit set to: 0-00:06.0 (6.0 minutes) <---------------??????????
+Submitted batch job 49783262
+cca016:/sps/nemo/scratch/ykozina/Falaise/tutorial/0nu(0)>seff 49783262
+Job ID: 49783262
+Cluster: ccslurmlocal
+User/Group: ykozina/nemo
+State: COMPLETED (exit code 0)
+Cores: 1
+CPU Utilized: 00:00:03
+CPU Efficiency: 60.00% of 00:00:05 core-walltime
+Job Wall-clock time: 00:00:05
+Memory Utilized: 119.71 MB <---------------?????????
+Memory Efficiency: 2.34% of 5.00 GB (5.00 GB/node)
+
+****************************************************************************************************************
+cca016:/sps/nemo/scratch/ykozina/Falaise/tutorial/0nu(0)>sbatch send_0nu.sh
+sbatch: INFO: Account: nemo
+sbatch: INFO: Licences: sps_default
+sbatch: INFO: Submission node: cca016
+sbatch: INFO: Partition set to: htc
+sbatch: INFO: Partition limited to one node per job.
+sbatch: INFO: Time limit set to: 0-00:03.0 (3.0 minutes) <--------------- ??????
+Submitted batch job 49783283
+cca016:/sps/nemo/scratch/ykozina/Falaise/tutorial/0nu(0)>seff 49783283 
+Job ID: 49783283
+Cluster: ccslurmlocal
+User/Group: ykozina/nemo
+State: COMPLETED (exit code 0)
+Cores: 1
+CPU Utilized: 00:00:03
+CPU Efficiency: 60.00% of 00:00:05 core-walltime
+Job Wall-clock time: 00:00:05
+Memory Utilized: 119.84 MB <---------------????
+Memory Efficiency: 2.34% of 5.00 GB (5.00 GB/node)
+
+*******************************************************************************************************************
+cca016:/sps/nemo/scratch/ykozina/Falaise/tutorial/0nu(0)>sbatch send_0nu.sh
+sbatch: INFO: Account: nemo
+sbatch: INFO: Licences: sps_default
+sbatch: INFO: Submission node: cca016
+sbatch: INFO: Partition set to: htc
+sbatch: INFO: Partition limited to one node per job.
+sbatch: INFO: Time limit set to: 0-00:10.0 (10.0 minutes) <---------------
+Submitted batch job 49783312
+cca016:/sps/nemo/scratch/ykozina/Falaise/tutorial/0nu(0)>seff 49783312 
+Job ID: 49783312
+Cluster: ccslurmlocal
+User/Group: ykozina/nemo
+State: COMPLETED (exit code 0)
+Cores: 1
+CPU Utilized: 00:00:04
+CPU Efficiency: 44.44% of 00:00:09 core-walltime
+Job Wall-clock time: 00:00:09
+Memory Utilized: 426.65 MB <---------------
+Memory Efficiency: 8.33% of 5.00 GB (5.00 GB/node)
+
+******************************************************************************************************************
+cca016:/sps/nemo/scratch/ykozina/Falaise/tutorial/0nu(0)>sbatch send_0nu.sh
+sbatch: INFO: Account: nemo
+sbatch: INFO: Licences: sps_default
+sbatch: INFO: Submission node: cca016
+sbatch: INFO: Partition set to: htc
+sbatch: INFO: Partition limited to one node per job.
+sbatch: INFO: Time limit set to: 0-00:08.0 (8.0 minutes) <---------------
+Submitted batch job 49783317
+cca016:/sps/nemo/scratch/ykozina/Falaise/tutorial/0nu(0)>seff 49783317
+Job ID: 49783317
+Cluster: ccslurmlocal
+User/Group: ykozina/nemo
+State: COMPLETED (exit code 0)
+Cores: 1
+CPU Utilized: 00:00:03
+CPU Efficiency: 60.00% of 00:00:05 core-walltime
+Job Wall-clock time: 00:00:05
+Memory Utilized: 122.19 MB <--------------- 
+Memory Efficiency: 2.39% of 5.00 GB (5.00 GB/node)
+
+*******************************************************************************************************************
+cca016:/sps/nemo/scratch/ykozina/Falaise/tutorial/0nu(0)>sbatch send_0nu.sh
+sbatch: INFO: Account: nemo
+sbatch: INFO: Licences: sps_default
+sbatch: INFO: Submission node: cca016
+sbatch: INFO: Partition set to: htc
+sbatch: INFO: Partition limited to one node per job.
+sbatch: INFO: Time limit set to: 0-00:07.0 (7.0 minutes) <---------------
+Submitted batch job 49783319
+cca016:/sps/nemo/scratch/ykozina/Falaise/tutorial/0nu(0)>seff 49783319
+Job ID: 49783319
+Cluster: ccslurmlocal
+User/Group: ykozina/nemo
+State: COMPLETED (exit code 0)
+Cores: 1
+CPU Utilized: 00:00:05
+CPU Efficiency: 50.00% of 00:00:10 core-walltime
+Job Wall-clock time: 00:00:10
+Memory Utilized: 408.65 MB <---------------
+Memory Efficiency: 7.98% of 5.00 GB (5.00 GB/node)
+
