@@ -20,8 +20,7 @@ start_time=$(date +%s)
 
 /sps/nemo/sw/redhat-9-x86_64/snsw/opt/falaise-5.1.2/bin/flsimulate -c Simu_0nu_Se82_10p3eve.conf -o Simu_0nu_Se82_10p3eve.brio
 
-CONF_FAL=/sps/nemo/sw/Falaise/install_develop/share
-CONF_FAL=$CONF_FAL/Falaise-4.1.0/resources/snemo/demonstrator/reconstruction/
+CONF_FAL="/sps/nemo/sw/Falaise/install_develop/share/Falaise-4.1.0/resources/snemo/demonstrator/reconstruction/"
 
 /sps/nemo/sw/redhat-9-x86_64/snsw/opt/falaise-5.1.2/bin/flreconstruct -i Simu_0nu_Se82_10p3eve.brio -p $CONF_FAL/official-2.0.0.conf -o Reco_0nu_Se82_10p3eve.brio 
 
