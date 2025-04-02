@@ -22,7 +22,7 @@ start_time=$(date +%s)
 
 CONF_FAL="/sps/nemo/sw/Falaise/install_develop/share/Falaise-4.1.0/resources/snemo/demonstrator/reconstruction/"
 
-/sps/nemo/sw/redhat-9-x86_64/snsw/opt/falaise-5.1.2/bin/flreconstruct -i Simu_0nu_Se82_10p3eve.brio -p $CONF_FAL/official-2.0.0.conf -o Reco_0nu_Se82_10p3eve.brio 
+/sps/nemo/sw/redhat-9-x86_64/snsw/opt/falaise-5.1.2/bin/flreconstruct -i /sps/nemo/scratch/ykozina/Falaise/tutorial/0nu/Se82/10pow3_eve/Simu_0nu_Se82_10p3eve.brio -p $CONF_FAL/official-2.0.0.conf -o /sps/nemo/scratch/ykozina/Falaise/tutorial/0nu/Se82/10pow3_eve/Reco_0nu_Se82_10p3eve.brio 
 
 end_time=$(date +%s)
 
