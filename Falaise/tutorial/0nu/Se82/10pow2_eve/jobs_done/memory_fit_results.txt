@@ -1,7 +1,3 @@
-[Manual Calculation]
-Mean: 165.382
-Sigma: 62.057
-
-[ROOT Gaussian Fit]
-Mean: 134.521
-Sigma: 19.360
+[TGraphErrors + Gaussian Fit]
+Mean: 144.106
+Sigma: 0.143

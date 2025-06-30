@@ -1,48 +1,80 @@
 void analyze_memory() {
     FILE* f = fopen("memory_raw.txt", "r");
-    if (!f) { printf("Cannot open memory_raw.txt\n"); return; }
+    if (!f) {
+        printf("Cannot open memory_raw.txt\n");
+        return;
+    }
 
     std::vector<double> values;
     char line[256];
-    fgets(line, sizeof(line), f);
+    fgets(line, sizeof(line), f);  // Пропускаємо заголовок
     while (fgets(line, sizeof(line), f)) {
         double val;
         if (sscanf(strrchr(line, '\t'), "\t%lf", &val) == 1)
             values.push_back(val);
     }
     fclose(f);
-    if (values.empty()) { printf("No data\n"); return; }
 
-    double sum = 0.0, sum_sq = 0.0;
-    for (auto v : values) {
-        sum += v;
-        sum_sq += v * v;
+    if (values.empty()) {
+        printf("No data\n");
+        return;
     }
 
-    double mean = sum / values.size();
-    double variance = (sum_sq / values.size()) - (mean * mean);
-    double sigma_manual = std::sqrt(variance);
-
+    // Визначення меж
     double min = *std::min_element(values.begin(), values.end());
     double max = *std::max_element(values.begin(), values.end());
-    auto h = new TH1D("h_memory", "Memory Usage;Memory [MB];Entries", 30, min - 1, max + 1);
-    for (auto v : values) h->Fill(v);
+    int nBins = 30;
+    double binWidth = (max - min) / nBins;
 
-    h->Fit("gaus");
-    auto f1 = h->GetFunction("gaus");
+    // Підготовка даних для графіка
+    std::vector<double> x, y, ex, ey;
+    for (int i = 0; i < nBins; ++i) {
+        double binLow = min + i * binWidth;
+        double binHigh = binLow + binWidth;
+        double binCenter = (binLow + binHigh) / 2.0;
 
+        // Підрахунок подій у біні
+        int count = 0;
+        for (auto v : values) {
+            if (v >= binLow && v < binHigh)
+                ++count;
+        }
 
+        if (count > 0) {
+            x.push_back(binCenter);
+            y.push_back(count);
+            ex.push_back(binWidth / 2.0);
+            ey.push_back(std::sqrt(count));
+        }
+    }
+
+    // Створення графіка з похибками
+    auto gr = new TGraphErrors(x.size(), x.data(), y.data(), ex.data(), ey.data());
+    gr->SetTitle("Memory Usage Distribution;Memory [MB];Entries");
+    gr->SetMarkerStyle(20);
+    gr->SetMarkerSize(1);
+    gr->SetLineColor(kBlue);
+    gr->SetMarkerColor(kBlue);
+
+    // Фіт функцією Гауса
+    auto gaus = new TF1("gaus", "gaus", min, max);
+    gr->Fit(gaus, "Q");
+
+    // Запис результатів у файл
     FILE* out = fopen("memory_fit_results.txt", "w");
-    fprintf(out, "[Manual Calculation]\nMean: %.3f\nSigma: %.3f\n\n", mean, sigma_manual);
-    fprintf(out, "[ROOT Gaussian Fit]\nMean: %.3f\nSigma: %.3f\n", f1->GetParameter(1), f1->GetParameter(2));
+    fprintf(out, "[TGraphErrors + Gaussian Fit]\nMean: %.3f\nSigma: %.3f\n", gaus->GetParameter(1), gaus->GetParameter(2));
     fclose(out);
 
-    auto c = new TCanvas("c_memory", "Memory", 800, 600);
-    h->Draw();
-    c->Update();
+    // Візуалізація
+    auto c = new TCanvas("c_memory_graph", "Memory Graph", 800, 600);
+    gr->Draw("AP");
+    gaus->Draw("same");
+    c->SaveAs("memory_graph.png");
 
-    TFile* fout = new TFile("memory_hist.root", "RECREATE");
-    h->Write();
+    // Збереження в ROOT файл
+    TFile* fout = new TFile("memory_graph.root", "RECREATE");
+    gr->Write("memory_graph");
+    gaus->Write("gaus_fit");
     c->Write();
     fout->Close();
 }
