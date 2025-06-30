@@ -1,0 +1,7 @@
+[Manual Calculation]
+Mean: 165.382
+Sigma: 62.057
+
+[ROOT Gaussian Fit]
+Mean: 134.521
+Sigma: 19.360

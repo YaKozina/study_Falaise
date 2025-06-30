@@ -1,0 +1,3 @@
+[ROOT Gaussian Fit]
+Mean: 15.627
+Sigma: 3.599
