@@ -1,35 +1,41 @@
-# study_Falaise
-
-Here are collected scripts and files I created while doing the very first steps in studying Falaise. This branch contains the following scripts: * 
+Here are collected scripts and files I created while doing the very first steps in studying Falaise. This branch contains the following scripts: 
 * MiModule_DataCutCalc.cpp
 * send_0nu.sh  
+
+In this file you can find a detailed description of them.
 
 # MiModule_DataCutCalc.cpp 
 is a script which provides data cuts for simulations corresponding to 4 criteria using MiModule which should lead to collecting the most appropriate data of bb-decay simulations.
 
-* 1st criteria (very rough estimation): 
+* 1st criterion (very rough estimation): 
 
-To assume that we detected bb-decay we should have 2 electrons detected. 
+To assume that we have detected a double beta decay (ββ-decay), we should detect 2 electrons.
 
-Electrons go towards the calorimeter and hit it. But only if 2 electrons hit the calorimiter we asuume that it is 1 event, if there was different number of electrons we don't count such events. So in the 1st approach we can say that we have bb-decay if there are 2 calorimiter hits, but at this point we don't care about what exact type of charged particles these 2 particles which we assume were electrons really are them - we are interested only at that fact that they were detected by the calorimiter.
+Electrons go toward the calorimeter and hit it. So, in this approach, we say that we have a ββ-decay if there are 2 calorimeter hits. Only if 2 electrons hit the calorimeter, we assume that it corresponds to 1 event. If a different number of electrons hit the calorimeter, we do not count such events.
 
-* 2nd criteria (is auxiliary for the 3rd one; includes 1st one)
+At this point, we do not care about the exact type of detected charged particles — we are only interested in the fact that 2 charged particles (assumed to be electrons) hit the calorimeter.
+
+* 2nd criterion (is auxiliary for the 3rd one; includes 1st one)
   
-As soon as we detected 2 charged particles (at this point we still assume that they are electrons and don't care whether they can be different particles e.g. positrones), to develop the next estimation (3rd) we need information about tracking. 
+As soon as we detect 2 charged particles (still assumed to be electrons), to develop the next criteria (the 3rd), we need information about tracking.
 
-If there are 2 charged particles, each of them has to have it's own track in the detector. 
+If there are 2 charged particles, each of them must have it's own track in the detector. 
 
-To reconstruct the trajectory of the b-particles we need at least 2 points - A (point of emmision - vertex coordinate) and B (point of hitting towards calorimiter - calorimiter hitting coordinate). Point A is located at the source of b-particles - Se82 foils, and point B at the calorimiter.
+To reconstruct the trajectory of the β-particles, we need at least two points: 
 
-For each event there should exist these 2 points - if they exist we can reconstruct the trajectory between, thus we have a track of the particle. If there exist only 1 of them we don't count such event. So in this estimation we count event as valod one only if there exist 2 reconstructed tracks for each particle.
+Point A — the emission point (vertex coordinate), located at the Se-82 foil (the source)
+Point B — the calorimeter hit point.
 
-* 3rd criteria (identifying the charge of the 2 particles from 1st criteria; includes criterias 1-2)
+For each event there should exist these 2 points - if both A and B exist for a particle, we can reconstruct its trajectory, thus we have a track of the particle. If there exist only 1 of them we don't count such event. 
+So in this estimation we count event as valod one only if there exist 2 reconstructed tracks for each particle.
 
-Now we would like to clarify what kind of charged partickles we detected by the caorimiter at the 1st step. To know this we should have information about the number of detected particles and whether we can reconstruct their tracks. If so, we can move forward and measure their charge.
+* 3rd criterion (identifying the charge of the 2 particles from 1st criteria; includes criterias 1-2)
 
-If the charge of 2 detected particles which have 2 reconstructed tracks is < 0, we count this event as valid. If at least 1 out of 2 particles doesn't obey this, we don't concider such event as vslid.
+Now we would like to identify what kind of charged particles we detected in the 1st step.
+To do that, we need to know the number of detected particles and whether we can reconstruct their tracks (criteria 1 and 2). If so, we can move forward and measure their charge.
 
-* 4th criteria (electrons' energy limitation; includes criterias 1-3)
+If the charges of both detected particles (with reconstructed tracks) are less than 0 (i.e. negative), we count this event as valid. If at least 1 of the 2 particles does not satisfy this condition, we do not consider such an event valid.
 
-Thus the Q-value for bb-decay of Se82 is 2.9 MeV, we need to detect only the electrons which are emmited because of the decay. So by this cut we reject all the background processes with lower energies.    
+* 4th criterion (electrons' energy limitation; includes criterias 1-3)
   
+Since the Q-value for ββ-decay of Se-82 is approximately 2.9 MeV, we are only interested in detecting electrons emitted due to this decay. Therefore, by applying this cut, we reject all background processes with lower energies.
